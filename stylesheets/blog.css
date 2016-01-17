@@ -1,0 +1,32 @@
+section h3 {
+	text-align: center;
+	margin: 0px;
+}
+
+section h4 {
+	text-align: center;
+	margin-top: 0px;
+}
+
+.post_title {
+	font-weight: 700;
+}
+
+.date {
+	font-weight: 400;
+	font-style: italic;
+}
+
+#blog_nav {
+	background-color: inherit;
+	border: none;
+}
+
+#blog_nav li {
+	width: 150px;
+	margin: 0 25px;
+}
+
+#blog_nav a:hover {
+	color: #fff;
+}

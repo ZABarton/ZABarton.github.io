@@ -1,0 +1,163 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	min-width: 600px;
+	margin: 0;
+	background-color: #ADA683;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 48px;
+	margin: 0 0 18px 0;
+}
+
+h2 {
+	font-size: 18px;
+	margin: 0 0 18px 0;
+}
+
+nav {
+	background-color: #838073;
+	font-weight: 700;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+nav ul {
+	padding: 0px;
+	width: 600px;
+	margin: auto;
+}	
+
+nav li {
+	display: inline-block;
+	min-width: 100px;
+	margin: 0 10px;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: #FFEE97;
+	color: #000;
+	padding: 10px 0;
+	margin: 5px;
+	border: solid 2px #000;
+}
+
+nav a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.current {
+	background-color: #000;
+	color: #fff;
+}
+
+section {
+	margin: 0 auto;
+	width: 600px;
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
+	background-color: #DBD098;
+	padding: 10px;
+}
+
+section img {
+	display: inline;
+	width: 290px;
+	height: 290px;
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+section a {
+	color: #000;
+}
+
+section a:hover {
+	color: #333;
+}
+
+#blogmenu h3 {
+	text-align: center;
+	margin-top: 0;
+}
+
+#blogmenu ul {
+	list-style: square;
+	margin: 0px;
+}
+
+#blogmenu li {
+	padding: 10px 0;
+}
+footer {
+	margin: 0 auto;
+	background-color: #838073;
+	min-width: 600px;
+	height: 80px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+footer a {
+	color: #000
+}
+
+#block {
+	width: 600px;
+	height: 80px;
+	margin: 0px auto;
+}
+#text {
+	width: 290px;
+	padding: 5px;
+	height: 70px;
+	margin: 0px;
+	position: absolute;
+}
+
+#text p {
+	margin-top: 0px;
+}
+
+.small {
+	font-size: 0.75em;
+}
+
+#social {
+	width: 290px;
+	height: 70px;
+	padding: 5px;
+	float: right;
+}
+
+footer ul {
+	display: inline-block;
+	width: 240px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding: 0px;
+	margin-left: 55px;
+}
+
+footer li {
+	display: inline-block;
+	padding: 5px
+}
+
+footer img {
+	width: 50px;
+	height: 50px;
+}
+
