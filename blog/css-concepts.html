@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zach Barton - Dev Bootcamp Blog</title>
+		<link rel="stylesheet" type="text/css" href="./../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="./../stylesheets/blog.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	</head>	
+	<body>
+		<header>
+			<h1>Zachary A. Barton</h1>
+			<h2>Dev Bootcamp Student Website</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href ="./../index.html">About</a>
+				<li><a href ="./portfolio.html">Portfolio</a>
+				<li><a href ="./index.html">Blog</a>
+				<li><a href ="./resume.html">Resume</a>
+				<li><a href ="./contact.html">Contact</a>
+			</ul>
+		</nav>
+		<section id="post">
+			<h3><span class="post_title">Margins, Borders, and Padding - Oh My!</span></h3>
+			<h4><span class="date">Sunday, January 17, 2016</span></h4>
+			<p>Margins, borders, and padding - what are they? What do they do? And how do you know which one you're supposed to use and when?</p>
+			<p>Margins, borders, and padding are all different methods of adding space between elements in an HTML layout. While they are all used to achieve the same effect, each method has its own unique behaviors. That means that it is highly unlikely that you can achieve your desired layout using a single method - instead, it's more likely that you'll need to use a combination of all three to create a clean and professional layout.</p>
+			<img src="./../images/box-model.gif" alt="Box Model from W3schools.com" />
+			<p>Consider the box model, shown here. The box model shows how these three properties are organized around the content. Working from the content outwards, the properties are always displayed in the following order: padding first, then the border, then finally the margin. You can specify the size of each of these properties as a constant value for each side of the content, or you can specify different values for each property for every side of the content. More specifically, each property can take up to four arguments: top, right, bottom, and left. This allows you to zero out the margins on the top and bottom, but specify larger margins to the left and right, for example.</p>
+			<p>Let's start with the border, since that's probably the easiest to understand. The border is a region that delineates the padding from the margin. The border can be set to a specific color, size, and line style. This will give you a visible line around your content that divides it visually from other elements in the layout. With no padding, this border will butt up directly against the content it is surrounding. And with no margins set, this border will butt up directly against any surrounding elements.</p>
+			<p>Padding is used to add transparent space immediately around the content inside the border. Because it is transparent, this means that the padding takes on the background color of the content. This allows you to clear a set amount of space around the content and push the border away from your content. You can clearly see this effect in most button styles - the amount of space between the text and the edge of the button is defined by padding.</p>
+			<p>Margins are used to add transparent space outside of the border. This won't visually change the size of the element containing your content, but it will extend the size of your element with transparent space so it will not appear to butt up against the edge of another one. Margins can also be calculated automatically by the browser, allowing for tricks such as centering an element horizontally regardless of the browser window size. Using margins is a very important part of making your page easier to understand. Clear visual space between elements separates your information and lets the viewer focus on specific parts of the page without becoming overwhelmed.</p>
+			<p>Now, consider the navigation bar we've used on this site as an example:</p>
+			<img src="./../images/nav-example.png" alt="Navigation Bar Example" />
+			<p>Padding is responsible for the space between the button text and the interior edge of the border. Note that this increases the clickable area for the user, allowing for an easier user experience. The border has a specified color and width to highlight the distinction between the clickable button and the nav bar itself. Finally, margins are used to maintain an even spacing between the buttons, as well as creating space on the top and bottom of the buttons to widen the nav bar.</p>
+			<p>Did all of that make sense? It's a lot of information to take in all at once, so I hope you didn't <span class="date">space out</span> reading this!</p> 
+			<nav id="blog_nav">
+				<ul>
+					<li><a href="./git.html">Previous Post</a>
+					<li><a href="./index.html">Back to Menu</a>
+					<li><a class="current" href="#">Next Post</a>
+				</ul>
+			</nav>
+		</section>
+
+		<footer id="blog_footer">
+			<div id="block">
+				<div id="text">
+				<p>&copy; 2016 Zach Barton</p>
+				<p class="small">Icons made by <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+				</div>
+				<div id="social">
+				<ul>
+					<li><a href="http://www.twitter.com"><img src="./../images/twitter.png" alt="Twitter"/></a>
+					<li><a href="http://www.facebook.com"><img src="./../images/facebook.png" alt="Facebook"/></a>
+					<li><a href="http://www.linkedin.com"><img src="./../images/linkedin.png" alt="LinkedIn"></a>
+					<li><a href="http://www.instagram.com"><img src="./../images/instagram.png" alt="Instagram"></a>
+				</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
