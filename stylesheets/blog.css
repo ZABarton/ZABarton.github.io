@@ -33,11 +33,12 @@ pre {
 #blog_nav {
 	background-color: inherit;
 	border: none;
+	min-width: 960px;
 }
 
 #blog_nav li {
 	width: 150px;
-	margin: 0 25px;
+	margin: 0 65px;
 }
 
 #blog_nav a:hover {
