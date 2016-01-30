@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zach Barton - Dev Bootcamp Blog</title>
+		<link rel="stylesheet" type="text/css" href="./../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="./../stylesheets/blog.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	</head>	
+	<body>
+		<header>
+			<h1>Zachary A. Barton</h1>
+			<h2>Full Stack Web Developer</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href ="./../index.html">About</a>
+				<li><a href ="./portfolio.html">Portfolio</a>
+				<li><a href ="./index.html">Blog</a>
+				<li><a href ="./resume.html">Resume</a>
+			</ul>
+		</nav>
+		<section>
+			<h3><span class="post_title">The Inject Method</span></h3>
+			<h4><span class="date">Saturday, January 30, 2016</span></h4>
+			<p>In the previous weeks of exercises, we've created some simple Ruby programs that search for a particular index within
+				a given array, such as the index containing the highest or lowest integer, or the longest or shortest string. We've
+				also written programs to sum up all of the values in a given array of numbers. To accomplish these tasks, we've
+				written methods that generally follow a pattern similar to this:</p>
+			<pre>
+def method(array)
+	desired_result = array[0]
+	array.each do |object|
+		if object > desired result
+			desired_result = object
+		end
+	return desired_result
+end
+			</pre>
+			<p>In these iterative loops, we initially declare our result equal to the first index in our given array. Then, we check each
+			object within the array to see if it is a better result than what we have previously stored. If so, we replace the result with the
+			new object and continue down the array to see if there's something better. When we've finished iterating, we know that our stored
+			result is the best one out of the array - in the above example, for instance, we're looking for the generically largest object. This
+			method works, but what if there was a simpler way to do this?</p>
+			<h5>The Inject Method</h5>
+			<p>It turns out there's already a predefined method for the array class that will take of this operation for us instead of having
+			to specify the parameters of the iteration using a do loop. This is the inject method, which works like this:
+			<pre>
+array.inject(initial_value) { |var_accumluator, var_object| code block}
+			</pre>
+			<p>What is this telling us? First, we're calling the inject method to act on an array. The inject method can take a single argument to specify an initial value - which, in this case, is optional. It also can take a block of code to perform a specific function on the objects in the array. One thing that stands out is that this code block affects an array, which should only require a single variable in the code block. But here, we ask
+			for two variables. If var_object is a placeholder for the objects in the array, what does the var_accumulator do?</p>
+			<p>The accumulator variable keeps a running total of whatever it is we're looking for as we iterate through the array. This simplifies things for
+			us quite a bit! Rather than needing to write lines of code to declare and continually re-define a variable storing our result, the inject method
+			will automatically take care of this and return the total in var_accumulator after the iteration is done. This streamlines some basic iterative
+			exercises, such as finding the sum of all values in an array.</p>
+			<pre>
+array = [1, 2, 3, 4, 5]
+array.inject { |sum, number| sum + number }
+=> 15
+			</pre>
+			<p>What the inject method is doing here is iterating through the array, and adding the value (number) to a running total variable (sum). After each
+			step in the iteration, the sum variable is updated and a new number value is added to it. Because we did not specify an initial value, the default
+			initial value will be the first number collected in the iteration - or, more simply put, the first object in the array.</p>
+			<p>So this is great for mathematical operations, but how does the inject method work with our initial example? Say we wanted to find the largest integer
+			in our array instead. How can we use the accumulator variable to store a single value in memory, rather than a running total? First, we'll need to expand our code block into a do loop, just like we originally had with the each method. However, there's a more streamlined way to write the contents of
+			that loop:</p>
+			<pre>
+array = [1, 2, 3, 4, 5]
+array.inject do |largest_number, number|
+	largest_number > number ? largest_number : number
+	end
+=> 5
+			</pre>
+			<p>This is a lot shorter than what we originally had in our first example! However we also introduced some new syntax here.	The ? and : are considered
+			conditional operators, and basically function like a compact if statement. This line is effectively telling us 
+<pre>
+"if_true" ? "return_this" : "else_return_this"
+</pre>
+			<p>Clearly this isn't as robust as a long-form if-then structure, but for quickly comparing two variables, it works very well. So in our above
+			example, all we are doing is checking to see if the largest number is still larger than the number on the current iteration step. If that's true,
+			our largest value remains in the accumulator variable. If not, our new number becomes the largest number and is stored in the accumulator variable
+			instead. Note that we did not need to explicitly set an initial value here either, as the inject method already assumes the first object is the
+			initial value</p>
+			<p>The biggest benefit to the inject method is that it can simplify long chains of enumerable methods by allowing them to be performed in the code block. As longer and longer chains of methods can make the code unreadable, it is much simpler to specify an inject iteration, then perform the needed
+			methods (such as cleaning inputs into the desired type with .to_s or .to_i) in the code block instead.</p>	
+			<nav id="blog_nav">
+				<ul>
+					<li><a href="./tech-discussion.html">Previous Post</a>
+					<li><a href="./index.html">Back to Menu</a>
+					<li><a class="current" href="#">Next Post</a>
+				</ul>
+			</nav>
+		</section>
+
+		<footer id="blog_footer">
+			<div id="block">
+				<div id="text">
+				<p>&copy; 2016 Zach Barton</p>
+				<p class="small">Icons made by <a href="http://field5.com" title="Agata Kuczminska">Agata Kuczminska</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+				</div>
+				<div id="social">
+				<ul>
+					<li><a href="http://www.twitter.com/ZABarton"><img src="./../images/twitter6.png" alt="Twitter"/></a>
+					<li><a href="http://www.github.com/ZABarton"><img src="./../images/github.png" alt="GitHub"/></a>
+					<li><a href="https://www.linkedin.com/in/ZABarton"><img src="./../images/linkedin28.png" alt="LinkedIn"></a>
+					<li><a href="mailto:zach.barton@gmail.com"><img src="./../images/postcard8.png" alt="Mail"></a>
+				</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
