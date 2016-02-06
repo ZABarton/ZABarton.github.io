@@ -33,8 +33,7 @@ class Card
 		@suit = "Hearts"
 	end
 
-end
-			</pre>
+end</pre>
 			<p>What we have here is the bare minimum we need to create a class. We've defined a class called Card, and within it we've included a <span="date">class method</span> called initialize. This method allows us to call a special method .new to create a new object that belongs to the card class. When the initialize method is called, it generates a new object with three variables. These variables have the "@" symbol in front of them, which makes them <span="date">instance variables</span>. Instance variables are different than local variables because they can be used within other class methods, allowing you to pass in extra information into a method and avoiding excessive local variables. It also means that any object, or instance, generated from this class will have these variables defined.</p>
 			<p>Of course, having a deck of cards containing only Aces of Hearts will make for some pretty boring poker games. Just like any method, we can add arguments to the initialize method to assign different values to the same instance variables.</p>
 			<pre>
@@ -48,8 +47,7 @@ class Card
 
 end
 
-first_card = Card.new("Ace", 1, "Hearts")
-			</pre>
+first_card = Card.new("Ace", 1, "Hearts")</pre>
 			<p>Now we can create variables outside of the class that will share common properties, which we can define when creating the object. This will save us some time when we need to generate an entire deck. We can even assign the cards different numerical values depending on how the cards will be used - the value of an Ace can be changed to 1 or 13 depending on whether aces are high or low.</p>
 			<p>What else can we do with our methods? Well, we can continue to add new class methods to give these objects unique behaviors. Let's add a simple class method to output a string of what card you're holding.</p>
 			<pre>
@@ -68,8 +66,7 @@ class Card
 end
 
 first_card = Card.new("Ace", 1, "Hearts")
-first_card.display #=> "This is the Ace of Hearts!"
-			</pre>
+first_card.display #=> "This is the Ace of Hearts!"</pre>
 			<p>Now we've created a display method that can be called on any instance of Card to output some of our instance variables. Notice how we didn't need to pass any arguments into our display method? This is because the instance variables defined when we initialized the object can be carried over to any method within the class.</p>
 			<p>Classes are a very powerful way to generate many objects that share properties in only a few lines of code! By writing out a model of our object within a class, we can use the class as a blueprint to quickly create as many copies of these objects as we need.</p>						
 			<nav id="blog_nav">

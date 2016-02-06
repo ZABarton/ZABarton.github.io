@@ -34,8 +34,7 @@ def method(array)
 			desired_result = object
 		end
 	return desired_result
-end
-			</pre>
+end</pre>
 			<p>In these iterative loops, we initially declare our result equal to the first index in our given array. Then, we check each
 			object within the array to see if it is a better result than what we have previously stored. If so, we replace the result with the
 			new object and continue down the array to see if there's something better. When we've finished iterating, we know that our stored
@@ -45,8 +44,7 @@ end
 			<p>It turns out there's already a predefined method for the array class that will take of this operation for us instead of having
 			to specify the parameters of the iteration using a do loop. This is the inject method, which works like this:
 			<pre>
-array.inject(initial_value) { |var_accumluator, var_object| code block}
-			</pre>
+array.inject(initial_value) { |var_accumluator, var_object| code block}</pre>
 			<p>What is this telling us? First, we're calling the inject method to act on an array. The inject method can take a single argument to specify an initial value - which, in this case, is optional. It also can take a block of code to perform a specific function on the objects in the array. One thing that stands out is that this code block affects an array, which should only require a single variable in the code block. But here, we ask
 			for two variables. If var_object is a placeholder for the objects in the array, what does the var_accumulator do?</p>
 			<p>The accumulator variable keeps a running total of whatever it is we're looking for as we iterate through the array. This simplifies things for
@@ -56,8 +54,7 @@ array.inject(initial_value) { |var_accumluator, var_object| code block}
 			<pre>
 array = [1, 2, 3, 4, 5]
 array.inject { |sum, number| sum + number }
-=> 15
-			</pre>
+=> 15</pre>
 			<p>What the inject method is doing here is iterating through the array, and adding the value (number) to a running total variable (sum). After each
 			step in the iteration, the sum variable is updated and a new number value is added to it. Because we did not specify an initial value, the default
 			initial value will be the first number collected in the iteration - or, more simply put, the first object in the array.</p>
@@ -69,13 +66,11 @@ array = [1, 2, 3, 4, 5]
 array.inject do |largest_number, number|
 	largest_number > number ? largest_number : number
 	end
-=> 5
-			</pre>
+=> 5</pre>
 			<p>This is a lot shorter than what we originally had in our first example! However we also introduced some new syntax here.	The ? and : are considered
 			conditional operators, and basically function like a compact if statement. This line is effectively telling us 
 <pre>
-"if_true" ? "return_this" : "else_return_this"
-</pre>
+"if_true" ? "return_this" : "else_return_this"</pre>
 			<p>Clearly this isn't as robust as a long-form if-then structure, but for quickly comparing two variables, it works very well. So in our above
 			example, all we are doing is checking to see if the largest number is still larger than the number on the current iteration step. If that's true,
 			our largest value remains in the accumulator variable. If not, our new number becomes the largest number and is stored in the accumulator variable

@@ -31,22 +31,19 @@
 array1 = [0, 1, 2]
 array2 = [-10.5, 1.5, 2.7]
 array3 = ["Hello", "I'm", "an array"]
-array4 = [[1, 2, 3], ["Hi", "Hello", "Hey"], [1.1, 2.2, 3.3]]
-			</pre>
+array4 = [[1, 2, 3], ["Hi", "Hello", "Hey"], [1.1, 2.2, 3.3]]</pre>
 			<p>Arrays store their objects in a defined order and each object is assigned an index number for future reference. The first object in the array is automatically given the index 0. Every object added to the array thereafter receives the next highest integer as its index. So for all of these examples, the highest index in these arrays is 2.
 			<pre>
 array1 = [0, 1, 2]
 array1[0] = 0
 
 array3 = ["Hello", "I'm", "an array"]
-array3[2] = "an array"
-			</pre>
+array3[2] = "an array"</pre>
 			<p>These two examples show how data is indexed and accessed in a linear, or <span class="date">one-dimensional</span> array. An array containing other arrays is a <span class="date">multi-dimensional</span> array and its values are accessed in a similar manner.</p>
 			<pre>
 array4 = [[1, 2, 3], ["Hi", "Hello", "Hey"], [1.1, 2.2, 3.3]]
 array4[0][2] = 3
-array4[2][0] = 1.1
-			</pre>
+array4[2][0] = 1.1</pre>
 			<p>The data in these arrays can be modified, appended, or deleted with several built-in methods to affect arrays. The limitation is that these objects are always referred to by their numerical indexes, and those cannot be changed.</p>
 			<h5>Hashes</h5>
 			<p>Hashes are a slightly more complex version of an array. Hashes store the same kind of information that an array can. However, the main difference between arrays and hashes is that while arrays are limited to using integers as indexes, hashes can use any type of object as an index. These indexes and their corresponding values are referred to as <span class="date">key-value</span> pairs.</p>
@@ -55,8 +52,7 @@ hash1 = {
 	"Key1" => 6
 	"Key2" => "This value"
 	:symbol => "Another value"
-}
-			</pre>
+}</pre>
 			<p>The fact that we can assign unique identifiers to the keys in a hash already makes them more descriptive than arrays. However, the biggest difference is that since a key can be any object, we can assign symbols as keys as shown in the last key-value pair in the above example. The benefit to using symbols as keys is that each symbol is a unique object throughout the entire program, which makes them faster to retrieve in a large and complex program.</p>
 			<h5>Usage</h5>
 			<p>Since both arrays and hashes are functionally the same, both of these can be used to represent a database of information. The difference between the two is that one is indexed by incremental integers and the other is indexed by unique keys. The usage of each depends on the type of database the program is using. For instance, you could use an array to contain a single list of users, and each user can be assigned their own hash. The hash could consist of multiple keys such as first name, last name, address, etc. Since an array can store hashes as objects, this makes a very convenient way to create a useful database.</p>
