@@ -14,12 +14,26 @@ section h5 {
 	margin-bottom: 0px;
 }
 
-pre {
+/*pre {
     font-family: monospace;
     white-space: pre;
     padding: 0 20px;
     margin-bottom: 0px;
 } 
+*/
+
+
+pre {
+  font-family: monospace;
+  background-color: #FFEE97;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 1px solid #000;
+}
 
 .post_title {
 	font-weight: 700;
