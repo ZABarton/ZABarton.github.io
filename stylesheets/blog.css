@@ -35,15 +35,6 @@ pre {
   border: 1px solid #000;
 }
 
-.post_title {
-	font-weight: 700;
-}
-
-.date {
-	font-weight: 400;
-	font-style: italic;
-}
-
 #blog_nav {
 	background-color: inherit;
 	border: none;
