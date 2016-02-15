@@ -79,6 +79,7 @@ section img {
 	display: inline;
 	margin: 0 10px 0 0;
 	float: left;
+	border: solid 1px #000;
 }
 
 section a {
@@ -87,6 +88,28 @@ section a {
 
 section a:hover {
 	color: #333;
+}
+
+section h3 {
+	text-align: center;
+	margin: 0px;
+}
+
+section h4 {
+	text-align: center;
+	margin-top: 0px;
+}
+
+article {
+	border-top: 2px dashed #000;
+	padding: 10px 0px;
+	height: 200px;
+	max-height: 200px;
+}
+
+article img:hover {
+	color: #000;
+	opacity: 0.8;
 }
 
 #blogmenu h3 {
@@ -163,3 +186,21 @@ footer img {
 	height: 64px;
 }
 
+.post_title {
+	font-weight: 700;
+}
+
+.date {
+	font-weight: 400;
+	font-style: italic;
+}
+
+.footnote {
+	font-size: 0.75em;
+}
+
+.folio {
+	width: 200px;
+	height: 200px;
+	border: 1px solid #000;
+}
