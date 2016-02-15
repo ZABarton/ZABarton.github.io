@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zach Barton - Dev Bootcamp Blog</title>
+		<link rel="stylesheet" type="text/css" href="./../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="./../stylesheets/blog.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	</head>	
+	<body>
+		<header>
+			<h1>Zachary A. Barton</h1>
+			<h2>Full Stack Web Developer</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href ="./../index.html">About</a>
+				<li><a href ="./portfolio.html">Portfolio</a>
+				<li><a href ="./index.html">Blog</a>
+				<li><a href ="./resume.html">Resume</a>
+			</ul>
+		</nav>
+		<section>
+			<h3><span class="post_title">Getting Thrown for a Loop in JavaScript</span></h3>
+			<h4><span class="date">Monday, February 15, 2016</span></h4>
+			<p>Starting our programming experience with Ruby has been pretty straightforward to learn, what with all the fancy ways we could iterate over data using enumerable methods. For instace, if we wanted to execute some action on every single item in array, we could use the each method to do this simply and concisely. For example:</p>
+<pre>
+array = ["I", "represent", "a", "lot", "of", "data"]
+array.each { |element| puts element + "!"}
+
+#=>
+"I!"
+"represent!"
+"a!"
+"lot!"
+"of!"
+"data!
+</pre>
+			<p>And that doesn't even include all the fancy enumerable methods like map - which can permanently change the contents of an array - or inject to keep a running total of all elements. In JavaScript, we are not as spoiled. We can still iterate over arrays, but now we don't have enumerable methods to do it for us. We're going to have to go back to some old fashioned loops we create ourselves.</p>
+			<h5>The JavaScript For Loop</h5>
+			<p>The for loop in JavaScript behaves pretty much how you'd expect it to behave in Ruby, except now the syntax is a little different. The for loop can require up to three things to run: a starting condition, an ending condition, and an increment condition. It looks like this:</p>
+<pre>
+var array = ["I", "represent", "a", "lot", "of", "data"]
+
+for(var counter = 0; counter < array.length; counter++) {
+	console.log(array[counter] + "!")
+}
+
+#=> 
+"I!"
+"represent!"
+"a!"
+"lot!"
+"of!"
+"data!
+</pre>
+			<p>Looking at the first line of our for loop (right after we define our array using the var command), we see the loop takes three arguments. The first is our starting condition. We define a variable named counter, which didn't exist before the loop began. Every time we want to run this loop, we always want our initial condition to start at the beginning of the array. So, we always want to start at the zeroth index.</p> 
+			<p>Our second argument (don't forget the semicolons!) is our ending condition. Our for loop will run indefinitely <span class="date">as long as this condition evaluates to true.</span> For instance, on our first iteration, this argument will check, "Is our counter variable less than the length of the array?" Counter equals 0, and in this case, the array length is 6, so this does evaluate to true and we can proceed.</p>
+			<p>Finally, we have our increment condition. This basically says that when the current iteration is complete, we are going to change the variable as specified in this argument. Specifically, we're increasing our counter variable by 1. That means on each successive iteration, we will be checking the next index in the array, one at a time. When we get to our sixth element (and remember, that means counter is equal to 5 due to the first index being 0), the loop will finish, update counter to 6, and our ending condition will return false before the next iteration starts. Thus, our loop terminates as expected.</p>
+			<h5>The JavaScript While Loop</h5>
+			<p>While loops also behave fairly similarly, and the syntax is more in line with what we learned in Ruby. While a for loop will continue to run over a range specified in your starting and ending conditions, a while loop will run indefinitely <span class="date">while</span> some condition you specify is true. Here's a real life example from an exercise this week.</p>
+			<pre>
+while(string.length > 3) {
+    var nextThreeDigits = string.substr(0, 3);
+    output.push(nextThreeDigits + ",")
+    string = string.replace(nextThreeDigits, '');
+  }
+</pre>
+			<p>We've got some new methods here you might not be familiar with, but here's what the loop is doing.</p>
+			<ul>
+				<li>We define our while loop to run while the length of a given string is greater than 3</li>
+				<li>We define a variable within the loop to equal the first three characters of the string. A note here: Substring takes two arguments - a starting index and the ending index. It will then return a string consisting of the characters from the start index <span class="date">up to but not including</span> the ending index.</li>
+				<li>We push those three characters to a variable outside of the loop named output, along with a comma following our substring.</li>
+				<li>Finally, we use the replace method with two arguments. Replace basically says, "I will find the first argument (in this case, the first three characters of the string) and replace it with the second (in this case, nothing)". This effectively removes the first three characters from the string, and now the fourth character becomes the first.</li>
+			</ul>	
+			<p>We continue looping in this method, removing three characters at a time, until the string only has three or fewer characters remaining. At that point, our while condition evaluates to false and the loop breaks.</p>
+			<p>So <span class="date">while</span> we don't have as many concise enumerative methods as Ruby does, JavaScript does provide several great options <span class="date">for</span> us. Your choice of loop will depend greatly on what kind of result you are trying to achieve.</p>						
+			<nav id="blog_nav">
+				<ul>
+					<li><a href="ruby-classes.html">Previous Post</a>
+					<li><a href="./index.html">Back to Menu</a>
+					<li><a class="current" href="#">Next Post</a>
+				</ul>
+			</nav>
+		</section>
+
+		<footer id="blog_footer">
+			<div id="block">
+				<div id="text">
+				<p>&copy; 2016 Zach Barton</p>
+				<p class="small">Icons made by <a href="http://field5.com" title="Agata Kuczminska">Agata Kuczminska</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+				</div>
+				<div id="social">
+				<ul>
+					<li><a href="http://www.twitter.com/ZABarton"><img src="./../images/twitter6.png" alt="Twitter"/></a>
+					<li><a href="http://www.github.com/ZABarton"><img src="./../images/github.png" alt="GitHub"/></a>
+					<li><a href="https://www.linkedin.com/in/ZABarton"><img src="./../images/linkedin28.png" alt="LinkedIn"></a>
+					<li><a href="mailto:zach.barton@gmail.com"><img src="./../images/postcard8.png" alt="Mail"></a>
+				</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
