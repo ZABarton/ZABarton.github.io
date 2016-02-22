@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zach Barton - Dev Bootcamp Phase 0</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="./stylesheets/blog.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<header>
+			<h1>Zachary A. Barton</h1>
+			<h2>Full Stack Web Developer</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href ="./index.html">About</a>
+				<li><a href ="./portfolio.html">Portfolio</a>
+				<li><a href ="./blog/index.html">Blog</a>
+				<li><a href ="./resume.html">Resume</a>
+			</ul>
+		</nav>
+		<section>
+			<h3>The Phase 0 Bootcamp Cheat Sheet</h3>
+			<h4><span class="date">How I Learned to Stop Worrying and Love the Syntax</span></h4>
+			<p><h5>Ruby Commands</h5></p>
+			<p><h5><span class="subheading">Command Line:</span></h5></p>
+				<details>
+		      <summary><code>ruby [filename].rb</code></summary>
+		      <p>Run a Ruby file directly from the command line.</p>
+		    </details>
+		    <details>  
+		      <summary><code>rspec [filename].rb</code></summary>
+		      <p>Run a rspec file directly from the command line.</p>
+		    </details>
+		    <details> 
+		      <summary><code>irb</code></summary>
+		      <p>Enter the Interactive Ruby shell.</p>
+		    </details>
+		  <p><h5><span class="subheading">IRB:</span></h5></p>
+				<details>
+		      <summary><code>load '[filename.rb]'</code></summary>
+		      <p>Loads a Ruby file into the Interactive Ruby Shell that can be interacted with.</p>
+		    </details>
+		  <p><h5><span class="subheading">Basic Syntax:</span></h5></p>
+		    <details>
+		      <summary><code>puts</code></summary>
+		      <p>Prints information with a line break after the display</p>
+		    </details>
+		    <details>
+		      <summary><code>gets</code></summary>
+		      <p>Gets an input from the user. Use the chomp method to remove the carriage return at the end of the input.</p>
+		    </details>
+		    <details>
+		      <summary><code>Math Operators</code></summary>
+		      <p>+: Addition</p>
+		      <p>-: Subtraction</p>
+		      <p>*: Multiplication</p>
+		      <p>/: Division</p>
+		      <p>**: Exponent</p>
+		      <p>%: Modulus</p>
+		    </details>
+		    <details>
+		      <summary><code>Comparison Operators</code></summary>
+		      <p>==: Check if two statements are equal</p>
+		      <p>!=: Check if two statements are unequal</p>
+		      <p>&lt;: Check is one statement is less than another</p>
+		      <p>&gt;: Check if one statement is greater than another</p>
+		      <p>&lt;=: Check is one statement is less than or equal to another</p>
+		      <p>&gt;=: Check if one statement is greater than or equal to another</p>
+		      <p>&lt;=&gt;: The combined comparison operator returns different values based on which argument is greater. Used for sorting.</p>
+		    </details>
+			<p><h5><span class="subheading">Loops</span></h5></p>
+		    <details>
+		      <summary><code>For Loop</code></summary>
+		      <p>Repeat a given loop for a certain range of conditions</p>
+		      <p>Syntax: for [variable] in [expression] do</p>
+		    </details>
+		    <details>
+		      <summary><code>While Loop</code></summary>
+		      <p>Repeat a given loop indefinitely while a certain condition is true</p>
+		      <p>Syntax: while [conditional] do</p>
+		    </details>
+		    <details>
+		      <summary><code>Until Loop</code></summary>
+		      <p>Repeat a given loop indefinitely while a certain condition is false</p>
+		      <p>Syntax: while [conditional] do</p>
+		    </details>		  		    		    		    
+		  <p><h5><span class="subheading">Methods:</span></h5></p>
+		    <details>
+		      <summary><code>Define Your Own</code></summary>
+		      <p>def method_name(argument1, argument2)</p>
+		      <p>(your code goes here)</p>
+		      <p>end</p>
+		    </details>
+		    <details>
+		      <summary><code>compact</code></summary>
+		      <p>Removes all nil values from an array</p>
+		    </details>
+		    <details>
+		      <summary><code>count</code></summary>
+		      <p>Counts all elements in an array. Can also use a code block to count only elements which evaluate to true.</p>
+		    </details>		    
+		    <details>
+		      <summary><code>each</code></summary>
+		      <p>The most basic iterative method. Used to iterate over each element in an array.</p>
+		      <p>Usage: array.each do |placeholder_variable|</p>
+		    </details>
+		    <details>
+		      <summary><code>each_with_index</code></summary>
+		      <p>Same as each but includes the index as a second placeholder variable.</p>
+		      <p>Usage: array.each do |placeholder_variable, index_placeholder|</p>
+		    </details>
+		    <details>			    		    	
+		      <summary><code>flatten</code></summary>
+		      <p>Removes all nested arrays from a main array. Can be done destructively.</p>
+		    </details>
+		    <details>
+		      <summary><code>insert</code></summary>
+		      <p>Can insert new elements at any point in the array.</p>
+		      <p>Usage: insert(index, object)</p>
+		    </details>
+		    <details>
+		      <summary><code>join</code></summary>
+		      <p>Returns the contents of an array as a string. Can use an optional separator argument to delineate values.</p>
+		      <p>Usage: join('separator')</p>
+		    </details>			    		    		    
+		    <details>			    		    	
+		      <summary><code>length</code></summary>
+		      <p>Returns the length of an object (generally strings or arrays)</p>
+		    </details>
+		    <details>			    		    	
+		      <summary><code>push</code></summary>
+		      <p>Appends an object as the last element of an array.</p>
+		      <p>Can also be written as '&lt;&lt;'</p>
+		    </details>
+		    <details>
+		      <summary><code>reverse</code></summary>
+					<p>When used on a string, returns the string in reverse</p>
+					<p>When used on an array, returns a new array with the elements reversed</p>
+					<p>Can be used destructively - reverse!</p>
+		    </details>
+		    <details>
+		      <summary><code>select</code></summary>
+		      <p>Iterates over an array using a conditional, and deletes any elements that evaluate false</p>
+		      <p>Can be done destructively.</p>
+		    </details>
+		    <details>			    		    	
+		      <summary><code>shuffle</code></summary>
+		      <p>Randomizes the positions of elements within an array.</p>
+		    </details>		    			    
+		    <details>			    		    	
+		      <summary><code>times</code></summary>
+		      <p>Perform a do loop for some number of times specified by the object times is called on.</p>
+		    </details>		    
+		    <details>			    		    	
+		      <summary><code>to_a</code></summary>
+		      <p>Converts an object to an Array</p>
+		    </details>
+		    <details>
+		      <summary><code>to_f</code></summary>
+		      <p>Converts a number to a Float</p>
+		    </details>
+		    <details>
+		      <summary><code>to_i</code></summary>
+		      <p>Converts a number to an Integer</p>
+		    </details>		    
+		    <details>
+		      <summary><code>to_s</code></summary>
+		      <p>Converts an object to a String</p>
+		    </details>
+		</section>
+		<footer>
+			<div id="block">
+				<div id="text">
+				<p>&copy; 2016 Zach Barton</p>
+				<p class="small">Icons made by <a href="http://field5.com" title="Agata Kuczminska">Agata Kuczminska</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+				</div>
+				<div id="social">
+				<ul>
+					<li><a href="http://www.twitter.com/ZABarton"><img src="./images/twitter6.png" alt="Twitter"/></a>
+					<li><a href="http://www.github.com/ZABarton"><img src="./images/github.png" alt="GitHub"/></a>
+					<li><a href="https://www.linkedin.com/in/ZABarton"><img src="./images/linkedin28.png" alt="LinkedIn"></a>
+					<li><a href="mailto:zach.barton@gmail.com"><img src="./images/postcard8.png" alt="Mail"></a>
+				</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
