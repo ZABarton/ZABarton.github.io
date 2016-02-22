@@ -56,3 +56,16 @@ pre {
 	height: 100%;
 	margin: 0 auto 1em auto;
 }
+
+figure {
+	display: block;
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+}
+
+figure img {
+	display: block;
+	width: auto;
+	height: auto;
+	margin: 0 180px 1em;

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zach Barton - Dev Bootcamp Blog</title>
+		<link rel="stylesheet" type="text/css" href="./../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="./../stylesheets/blog.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	</head>	
+	<body>
+		<header>
+			<h1>Zachary A. Barton</h1>
+			<h2>Full Stack Web Developer</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href ="./../index.html">About</a>
+				<li><a href ="./../portfolio.html">Portfolio</a>
+				<li><a href ="./index.html">Blog</a>
+				<li><a href ="./../resume.html">Resume</a>
+			</ul>
+		</nav>
+		<section>
+			<h3><span class="post_title">Regular Expressions</span></h3>
+			<h4><span class="date">Monday, February 22, 2016</span></h4>
+			<figure>
+				<img src="./../images/regular_expressions.png" />
+			</figure>
+			<p>In all of our previous exercises, when we had to search for patterns within the information given, we had to create our loops and substitution methods manually. This is a great way to learn the fundamental concepts of programming, since we had to basically build everything from scratch. But is there an easier way? Of course there is. We can use <span class="date">regular expressions</span> to quickly search a large amount of information for patterns and work with that data.</p>
+			<p>A regular expression is an expression that can be used to match a pattern against strings. They can be used to find strings that contain the matching expression as a substring, or even extract the matching expression from the original string. Thus, in the above comic, the hero can use a regular expression to search through a huge database for any substring matching the standard format of an email address.</p>
+			<h5>Regular Expressions in Ruby</h5>
+			<p>A regular expression is defined between forward slashes, like so:</p>
+<pre>
+/expression/
+</pre>
+			<p>By itself, it doesn't do much. However, you can use the match operator '=~' to determine if the regular expression matches with a larger string.</p>
+<pre>
+/expression/ =~ "I contain the expression"
+# => 14
+</pre>
+			<p>The match operator returns the first index in the larger string where the match is found - in this case, the expression starts at the 14th index. If no match is found, the match operator instead returns nil.</p>
+			<p>There are a lot of tricks you can do with regular expressions to make them more useful and flexible. Here are some examples:</p>
+<pre>
+Searching for patterns with wild cards within a range:
+/w[aeiou]ld/ => searches for any of the following patterns: wald, weld, wild, wold, wuld
+/1[0-9]/ => searches for any pattern within the range 10 to 19
+
+/^f/ => reverses the pattern, in this case, searching for any string WITHOUT 'f'
+</pre>			
+			<h5>Regular Expressions in JavaScript</h5>
+			<p>Regular expressions in JavaScript behave the same way as you would expect in Ruby. They are also used as an assistive tool to search and replace text in a large amount of information. The syntax is slightly different for JavaScript:</p>
+<pre>
+var pattern = /expression/modifier
+</pre>
+			<p>As this is JavaScript, we need to define our expression as a variable by declaring it with the var keyword. The expression itself is within the forward slashes, just as we would delineate it with Ruby. Directly following the second forward slash is a modifier that can optionally filter the results. Modifiers can specify the search to be case-sensitive or insensitive, finding multiple matches globally, or find matches across multiple lines.</p>
+			<p>The syntax for adapting the search for wild cards and multiple values is similar to Ruby:</p>
+<pre>
+[abc] => Find any character within the brackets
+[^abc] => Find any character NOT within the brackets
+[0-9] => Find any digit within the range
+[x|y] => Find y as an alternative to x
+</pre>
+			<p>This is just a basic overview of what regular expressions can do. As we begin working with larger sets of data within more complex programs, regular expressions will become invaluable for searching through data quickly and efficiently. There are many more modifiers that can be added to regular expressions that can make them very powerful and flexible tools.</p>				
+			<nav id="blog_nav">
+				<ul>
+					<li><a href="JavaScript.html">Previous Post</a>
+					<li><a href="./index.html">Back to Menu</a>
+					<li><a class="current" href="#">Next Post</a>
+				</ul>
+			</nav>
+		</section>
+
+		<footer id="blog_footer">
+			<div id="block">
+				<div id="text">
+				<p>&copy; 2016 Zach Barton</p>
+				<p class="small">Icons made by <a href="http://field5.com" title="Agata Kuczminska">Agata Kuczminska</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+				</div>
+				<div id="social">
+				<ul>
+					<li><a href="http://www.twitter.com/ZABarton"><img src="./../images/twitter6.png" alt="Twitter"/></a>
+					<li><a href="http://www.github.com/ZABarton"><img src="./../images/github.png" alt="GitHub"/></a>
+					<li><a href="https://www.linkedin.com/in/ZABarton"><img src="./../images/linkedin28.png" alt="LinkedIn"></a>
+					<li><a href="mailto:zach.barton@gmail.com"><img src="./../images/postcard8.png" alt="Mail"></a>
+				</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
