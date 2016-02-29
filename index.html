@@ -1,52 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<title>Zach Barton - Dev Bootcamp Phase 0</title>
-		<link rel="stylesheet" type="text/css" href="./stylesheets/default.css">
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<header>
-			<h1>Zachary A. Barton</h1>
-			<h2>Full Stack Web Developer</h2>
-		</header>
-		<nav>
-			<ul>
-				<li><a class="current" href ="#">About</a>
-				<li><a href ="./portfolio.html">Portfolio</a>
-				<li><a href ="./blog/index.html">Blog</a>
-				<li><a href ="./resume.html">Resume</a>
-			</ul>
-		</nav>
-		<section>
-			<img src="./images/profile.png" alt="Profile Picture"/>	
-			<p>
-				My name is Zach Barton and I'm an aspiring web developer with a background in mechanical engineering and project management. As my job responsibilites shifted more towards project management and away from engineering, I became dissatisfied with my career path. I felt like I wasn't solving the kind of problems that I wanted to be solving in my day-to-day work.
-			<p>
-				So, I decided to drop everything and chase a new future in web development. It feels great to be learning new skills again, and I'm excited to get back to my engineering roots.
-			</p>
-			<p>
-				In my spare time I <a href="http://forcedoutput.com">design board games</a> and chase new adventures.
-			</p> 
-			<p>
-				Thanks for stopping by!
-			</p>
-		</section>
-		<footer>
-			<div id="block">
-				<div id="text">
-				<p>&copy; 2016 Zach Barton</p>
-				<p class="small">Icons made by <a href="http://field5.com" title="Agata Kuczminska">Agata Kuczminska</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
-				</div>
-				<div id="social">
-				<ul>
-					<li><a href="http://www.twitter.com/ZABarton"><img src="./images/twitter6.png" alt="Twitter"/></a>
-					<li><a href="http://www.github.com/ZABarton"><img src="./images/github.png" alt="GitHub"/></a>
-					<li><a href="https://www.linkedin.com/in/ZABarton"><img src="./images/linkedin28.png" alt="LinkedIn"></a>
-					<li><a href="mailto:zach.barton@gmail.com"><img src="./images/postcard8.png" alt="Mail"></a>
-				</ul>
-				</div>
-			</div>
-		</footer>
-	</body>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Z.A. Barton</title>
+	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/about.css">
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta name="robots" content="all" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+</head>	
+    
+<body>
+
+<!-- <div id="monogram">
+	<img src="monogram.png" />
+</div> -->
+
+<section class="about">
+	<h1>Hello!</h1>
+	<p>
+		I'm Zach Barton and I'm a web developer based out of Chicago, IL. I originally started my career as a mechanical engineer doing design work and engineering change management for Toyota, BAE Systems, Nordex USA, and most recently the Chicago Transit Authority. As my career drifted away from engineering to focus on project management, I decided to shift careers into web development to get back to my engineering roots.
+	</p>
+	<p>
+		I'm eager to regain a career solving technical puzzles, and to learn the tools and skills I need, I'm currently attending <a href="http://devbootcamp.com">Dev Bootcamp</a> in Chicago to jump-start my career change in the best way possible. You can see the <a href="http://zabarton.github.io/portfolio">various projects</a> I've completed during my time here. I'm also writing about my experience and the things I've learned on my <a href="http://zabarton.github.io/blog">blog</a>.
+	</p>
+	<p>
+		In my spare time, I like to <a href="http://forcedoutput.com">design board games</a>. 
+	</p>
+	<h1>Find Me</h1>
+	<ul>
+		<li><a href="http://www.twitter.com/ZABarton" alt="Twitter"/>Twitter</a>
+		<li><a href="http://www.github.com/ZABarton" alt="GitHub"/>GitHub</a>
+		<li><a href="https://www.linkedin.com/in/ZABarton" alt="LinkedIn"/>LinkedIn</a>
+	</ul>
+	<p>Or shoot me an <a href="mailto:zach.barton@gmail.com">email</a> instead.
+	<p class="small">
+		Personal Page design credited to <a href="http://nazhamid.com/">Naz Hamid</a> at <a href="http://weightshift.com/">Weightshift</a>
+	</p> 
+</section>
+
+<!--include jquery & backstretch-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.backstretch.min.js"></script>
+<script type="text/javascript">
+$(function(){
+     $(window).resize(function(){
+         if($(this).width() >= 767){
+             $.backstretch("selfie.png", {speed: 150});
+         }
+      })
+      .resize();//trigger resize on page load
+});
+</script>
+
+</body>	
 </html>
